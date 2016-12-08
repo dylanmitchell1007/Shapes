@@ -11,25 +11,29 @@ void BaseShape::DebugPrint()
 }
 void Point::DebugPrint() 
 {
-	cout << this->X_Point << this->Y_Point;
+	cout << "{";
+	cout << this->m_X << ","<< this->m_Y;
+	cout << "}\n";
 	
 };
-void Retangle::DebugPrint()
+
+void Line::DebugPrint()
 {
-	cout << this->X_Ret << this->Y_Ret << this->W_Ret << this->Z_Ret;
+	this->Point_X->DebugPrint();
+	this->Point_Y->DebugPrint();
+}
+
+void Rectangle::DebugPrint()
+{	
+	cout << this->X_Ret << this->Y_Ret << "," << this->W_Ret << this->Z_Ret;
 };
 void Circle::DebugPrint()
 {
-
+	cout << *this->m_Center << this->m_Radius;
 };
-void Line::DebugPrint()
-{
 
-}
-
-;
 void Triangle::DebugPrint()
 {
-
+	cout << *this->m_LX << *this->m_LY << *this->m_LZ;
 };
 
